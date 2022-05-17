@@ -28,8 +28,7 @@ app.get("/productoRandom", async (req,res)=>{
     if(Array.isArray(items)){
       const item = items[Math.floor(Math.random() * items.length)];
       res.json({products: item, message: 'Success'}).status(200)
-    }
-    else res.json({products: [], message: 'Product list empty'}).status(204)
+    }else res.json({products: [], message: 'Product list empty'}).status(204)
   }catch(err){
     console.log('[ERROR GET RANDOM PRODUCT]', err)
   }
