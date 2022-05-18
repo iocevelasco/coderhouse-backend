@@ -2,19 +2,11 @@ const fs = require('fs')
 const express = require('express');
 const app = express()
 const PORT = process.env.PORT || 8080
-
-const readAllProducst = async () => {
-  try{
-    const content = await fs.promises.readFile('productos.txt', 'utf-8')
-    return JSON.parse(content)
-  }catch(err){
-    console.error('[READ ERROR]',err)
-  }
- }
+const products = require('../tp2')
 
 app.get("/products", async (req,res)=>{
   try{
-    const items = await readAllProducst()
+    const items = await products.getAll()
     if(Array.isArray(items))res.json({products: items, message: 'Success'}).status(200)
     else res.json({products: [], message: 'Product list empty'}).status(204)
   }catch(err){
@@ -24,7 +16,7 @@ app.get("/products", async (req,res)=>{
 
 app.get("/productoRandom", async (req,res)=>{
   try{
-    const items = await readAllProducst()
+    const items = await products.getAll()
     if(Array.isArray(items)){
       const item = items[Math.floor(Math.random() * items.length)];
       res.json({products: item, message: 'Success'}).status(200)
