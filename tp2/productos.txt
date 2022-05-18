@@ -1,1 +1,1 @@
-[{"title":"Paper","price":12344,"thumbnail":"kk","id":1},{"title":"Table","price":12344,"thumbnail":"kk","id":2},{"title":"Phone","price":12344,"thumbnail":"kk","id":3}]
+[{"title":"Paper","price":12344,"thumbnail":"kk","id":1},{"title":"Phone","price":12344,"thumbnail":"kk","id":3}]
