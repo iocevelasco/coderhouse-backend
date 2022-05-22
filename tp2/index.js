@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-class Container {
+module.exports = class Container {
   constructor(file){
     this.file = file
   }
@@ -28,7 +28,6 @@ class Container {
       console.error('[READ ERROR]',err)
     }
    }
-  
 
   async save(newElement){
     try{
@@ -90,16 +89,3 @@ class Container {
     }
   }
 }
-
-
-const products = new Container("productos.txt")
-
-const product1 = {title: 'Paper', price: 12344, thumbnail: 'kk'}
-const product2 = {title: 'Table', price: 12344, thumbnail: 'kk'}
-const product3 = {title: 'Phone', price: 12344, thumbnail: 'kk'}
-
-products.save(product1)
-products.save(product2)
-products.save(product3)
-
-module.exports = products
