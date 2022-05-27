@@ -1,0 +1,16 @@
+<h4> Messages List </h4>
+<ul class="list-group">
+  {{#each messages}}
+    <li class="list-group-item">
+      <div class="message-item">
+        <div>
+          <p class="message-item__author">{{author}}</p>
+          <p class="message-item__date">{{date}}</p>
+        </div>
+        <div>
+          <p>{{text}}</p>
+        </div>
+      </div>
+    </li>
+  {{/each}}
+</ul>

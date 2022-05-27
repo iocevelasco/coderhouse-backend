@@ -1,0 +1,70 @@
+.layout {
+  padding: 24px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section{
+  background-color: var(--bs-gray-200);
+  padding: 4rem;
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+/* messages */
+.message__wrapper fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.message__wrapper .row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.message__wrapper > div {
+  width: 50%;
+}
+
+.message-item{
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.message-item > div:first-child{
+  display: flex;
+  gap: 1rem;
+}
+
+.list-group{
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.message-item__author{
+  color:var(--bs-primary);
+  font-weight: 600;
+}
+
+.message-item__date{
+  color:var(--bs-gray-700);
+  font-weight: 300;
+}
+
+/* products */
+
+.products__wrapper fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.products__wrapper > div {
+  width: 50%;
+}
